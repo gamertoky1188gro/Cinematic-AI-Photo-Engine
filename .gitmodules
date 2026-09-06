@@ -1,0 +1,3 @@
+[submodule "Image-Adaptive-3DLUT"]
+	path = Image-Adaptive-3DLUT
+	url = https://github.com/HuiZeng/Image-Adaptive-3DLUT.git

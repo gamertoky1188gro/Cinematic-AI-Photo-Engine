@@ -5,7 +5,7 @@ import torch
 from PIL import Image
 from torchvision.transforms.functional import to_tensor
 
-_backend = Path(__file__).resolve().parents[3] / "Image-Adaptive-3DLUT"
+_backend = Path(__file__).resolve().parents[2] / "Image-Adaptive-3DLUT"
 if str(_backend) not in sys.path:
     sys.path.insert(0, str(_backend))
 
@@ -24,7 +24,7 @@ class AdaptiveLUTStage:
         device: torch.device | None = None,
     ):
         if model_dir is None:
-            model_dir = Path(__file__).resolve().parents[3] / "Image-Adaptive-3DLUT" / "pretrained_models" / "sRGB"
+            model_dir = Path(__file__).resolve().parents[2] / "Image-Adaptive-3DLUT" / "pretrained_models" / "sRGB"
         else:
             model_dir = Path(model_dir)
 

@@ -10,7 +10,7 @@ import requests
 from pathlib import Path
 
 SERVER = "http://localhost:8000"
-TEST_IMAGE = r"D:\imgtocinamatic\Image-Adaptive-3DLUT\demo_images\sRGB\a1629.jpg"
+TEST_IMAGE = r"D:\imgtocinamatic\CinematicAI\Image-Adaptive-3DLUT\demo_images\sRGB\a1629.jpg"
 OUTPUT_DIR = Path(r"D:\imgtocinamatic\CinematicAI\results\server_test")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
