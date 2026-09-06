@@ -1,0 +1,15 @@
+{
+  "lut_strength": 1.0,
+  "film_strength": 0.6469,
+  "highlight_rolloff": 0.7339,
+  "shadow_tint": 0.23,
+  "color_separation": 0.227,
+  "halation": 0.128,
+  "bloom": 0.178,
+  "grain": 0.1,
+  "vignette": 0.1095,
+  "perspective": 0.0,
+  "lens_distortion": 0.0348,
+  "chromatic_aberration": 0.0238,
+  "edge_softness": 0.1133
+}

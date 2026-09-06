@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+lut-env/
+
+# Environment
+.env
+.env.local
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Model checkpoints (large binary files)
+models/checkpoints/*.pth
+models/checkpoints/*.pt
+models/checkpoints/*.bin
+models/checkpoints/*.onnx
+
+# Temp / runtime
+temp_uploads/
+*.tmp
+
+# Dataset (large, generated externally)
+dataset/images/
+dataset/references/
+dataset/unsplash_images/
+
+# Results / outputs (generated)
+results/
+output/
+ab_results_v2/
+ab_results_v3/
+input/
+
+# Logs
+*.log
+server_err.txt
+server_out.txt
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
