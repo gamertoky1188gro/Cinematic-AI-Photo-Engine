@@ -1,0 +1,27 @@
+# CinematicAI - Core Dependencies
+# For both server.py (HTTP) and binary.py (pywebview desktop)
+
+# ML / Inference
+torch>=2.14
+torchvision>=0.29
+
+# Image Processing
+pillow>=12.3
+numpy>=2.4
+scipy>=1.17
+opencv-python
+rawpy>=0.27
+
+# Server (server.py only)
+fastapi>=0.141
+uvicorn>=0.52
+pydantic>=2.13
+starlette>=1.6
+
+# Desktop (binary.py only)
+pywebview>=6.2
+pythonnet
+
+# Utilities
+requests>=2.34
+tqdm>=4.70

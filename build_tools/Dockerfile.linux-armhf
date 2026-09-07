@@ -1,0 +1,35 @@
+# ---- Linux armhf (armv7l, 32-bit) ----
+FROM arm32v7/python:3.11-slim AS builder
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc g++ libgl1-mesa-glx libglib2.0-0 \
+    libsm6 libxext6 libxrender-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY build_tools/requirements.txt requirements.txt
+
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu \
+    && pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+RUN pip install --no-cache-dir pyinstaller \
+    && pyinstaller binary.spec --noconfirm
+
+# ---- Runtime ----
+FROM arm32v7/debian:bookworm-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender1 \
+    libgomp1 curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY --from=builder /app/dist/CinematicAI .
+
+RUN chmod +x CinematicAI
+
+EXPOSE 8000
+CMD ["./CinematicAI"]

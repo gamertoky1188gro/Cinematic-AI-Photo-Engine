@@ -1,0 +1,25 @@
+.git
+.gitignore
+.gitmodules
+__pycache__
+*.pyc
+*.pyo
+build/
+dist/
+output/
+results/
+input/
+dataset/
+temp_uploads/
+ab_results_v2/
+ab_results_v3/
+*.txt
+!requirements.txt
+node_modules/
+frontend/dist/
+frontend/node_modules/
+frontend (binary)/node_modules/
+server_err.txt
+server_out.txt
+LICENSE
+README.md
